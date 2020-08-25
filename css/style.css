@@ -1,22 +1,152 @@
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 150px;
+    width: 1040px;
   }
   
   .header{
     display: flex;
     justify-content: center;
+    background-color: #b63e3e;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
   }
   
   .container{
     display: flex; 
-  
+    background-color: #8f7d7d;
+    height: calc(100vh - 120px);
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
   }
   
+  .navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #332f2f;
+    color: whitesmoke;
+  }
+
   .searchBox{
+    padding: 20px;
+  }
+
+  #srchButton{
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #b63e3e;
+    border-color: whitesmoke;
+    border-radius: 10px;
+  }
+
+  #srchPokeInput{
+    background-color: whitesmoke;
+    color: #332f2f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: #332f2f;
+  }
+
+  .left-side{
+    width: 800px;
+    border: 1px solide white;
+    /* display: flex;
+    flex-direction: column; */
+    text-align: center;
+  }
+
+  .pokeMainInfo{
+    text-transform: capitalize;
     display: flex;
     flex-direction: column;
+    background-color: whitesmoke;
+    width: 400px;
+    margin: 30px 80px;
+    padding: 25px;
+    border-radius: 100px;
   }
-  
+
   .pokeName{
-    text-transform: capitalize;
+    font-size: 40px;
+    margin: 20px 0;
+    color:#bd0000;
+  }
+
+  .pokeNumber{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #b63e3e;
+  }
+
+  /* .pokeMainInfo:ne{
+    height: 300px;
+  } */
+
+  .pokeForms{
+      display: flex;
+      justify-content: space-around;
+      margin: 10px;
+      color: #332f2f;  
+  }
+
+  .pokeForms div{
+    display: flex;
+    flex-direction: column;
+}
+
+  .pokeForms span{
+    font-size: 15px;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+  .normalForm span{
+    background-color: #8f7d7d;
+  }
+
+  .shinyForm span{
+    background-color: #b63e3e;
+  }
+
+  .pokeType{
+    margin: 5px;
+    color: #332f2f;
+  }
+
+  .types{
+    background-color: #8f7d7d;
+    border-radius: 15px;
+    padding: 4px;
+    color: whitesmoke;
+  }
+
+  .pokeAbility{
+    margin: 5px 0;
+    color: #332f2f;
+    padding: 5px;
+  }
+
+  .abilities{
+    margin: 15px;
+  }
+
+  .abilities .ability{
+    background-color: #8f7d7d;
+    border-radius: 15px;
+    padding: 5px;
+    color: whitesmoke;
+  }
+
+  .hiddenAbility{
+    margin: 15px;
+  }
+
+  .hiddenAbility .ability{
+    background-color: #b63e3e;
+    border-radius: 15px;
+    padding: 5px;
+    color: whitesmoke;
   }
