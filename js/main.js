@@ -1,7 +1,7 @@
 const pokeInfoDisplay = document.querySelector('.pokeMainInfo')
 const searchPokeInput = document.getElementById('srchPokeInput')
 const searchButton = document.getElementById('srchButton')
-
+const pkdxList = document.querySelector('.pokedexList')
 
 const search = () => {
     let query = searchPokeInput.value
@@ -102,56 +102,22 @@ const searchWithKey = event => {
 searchButton.addEventListener('click', search)
 searchPokeInput.addEventListener('keydown', searchWithKey)
 
+let url = " https://pokeapi.co/api/v2/pokemon?limit=807&offset=0";
 
+fetch(url)
 
+fetch(url)
+    .then(response => response.json())
+    .then(data => fetchPokeList(data))
 
+const fetchPokeList = pokeListData => {
 
+    for(listName of pokeListData.results) {
+        console.log(listName.name)
+            // let listItem = document.createElement('li')
+            // listItem.textContent = `${listName.name}`
+            // pkdxList.insertAdjacentHTML('afterbegin', listItem)                   
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// fetch('https://pokeapi.co/api/v2/pokemon/567')
-//     .then(res => {
-//          return res.json() })
-
-//     .then(data => {
-//         let element = document.querySelector('.pokedex');
-//      element.innerHTML = `${data.name}`
-
-//      console.log(data)
-//      });
-
-// let url = " https://pokeapi.co/api/v2/pokemon?limit=807&offset=0";
-
-// fetch(url)
-//     .then(response => response.json())
-//     // .then(data => {
-//     //     for(nombres of data.results){
-//     //         const list = document.querySelector('.pokedex-list')
-//     //         list.innerHTML = `<div>${nombres.name}</div>`
-//     //         // list.textContent = `${nombres.name}`
-//     //         // document.querySelector('.pokedex-list').insertAdjacentHTML("beforeend", list)
-//     //         console.log(nombres.name)
-//     //     };
-
-
-//     // })
-//     .then(data => {
-//         results.forEach(name => {
-//             const pokeName = document.createElement('div')
-//             pokeName.textContent = results.name 
-//             document.querySelector('.pokedex-list').insertAdjacentHTML("beforeend", pokeName)
-
-//     })
-//     console.log(data.results.name)
-//     })
+    
+}
