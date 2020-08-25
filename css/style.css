@@ -1,0 +1,22 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .header{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container{
+    display: flex; 
+  
+  }
+  
+  .searchBox{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pokeName{
+    text-transform: capitalize;
+  }
